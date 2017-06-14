@@ -1,3 +1,8 @@
+$app-sidenav-width: 256px;
+
 .app-content-container {
     flex-grow: 1;
+}
+.app-sidenav {
+    width: $app-sidenav-width;
 }

@@ -1,5 +1,11 @@
 <md-sidenav-container class="app-content-container">
     <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+        <md-nav-list class="sidenav-list">
+            <md-list-item class="sidenav-list-item" routerLinkActive="active">
+                <md-icon md-list-icon>home</md-icon>
+                <a md-line routerLink="/home" class="list-item">Home</a>
+            </md-list-item>
+        </md-nav-list>
     </md-sidenav>
     <router-outlet></router-outlet>
 </md-sidenav-container>
