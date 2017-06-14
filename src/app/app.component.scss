@@ -1,0 +1,14 @@
+app-root {
+  display: flex;
+  flex-direction: column;
+}
+
+app-root > app-sidenav {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+app-header {
+  position: relative;
+  z-index: 10;
+}

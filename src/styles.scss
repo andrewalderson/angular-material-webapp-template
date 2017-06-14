@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import './app/app-theme';
+@import './app/components/app-header/app-header-theme';
+@import './app/components/app-sidenav/app-sidenav-theme';
+
+@include mat-core();
+
+$primary: mat-palette($mat-light-blue);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+@include app-theme($theme);
+@include app-header-theme($theme);
+@include app-sidenav-theme($theme);
+
+html, body, app-root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: $mat-font-family;
+}
