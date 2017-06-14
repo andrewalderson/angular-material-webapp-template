@@ -1,17 +1,17 @@
 <md-sidenav-container class="app-content-container">
     <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
         <md-nav-list class="sidenav-list">
-            <md-list-item class="sidenav-list-item" routerLinkActive="active">
+            <md-list-item class="sidenav-list-item" routerLink="/home" routerLinkActive="active">
                 <md-icon md-list-icon>home</md-icon>
-                <a md-line routerLink="/home" class="list-item">Home</a>
+                <span md-line>Home</span>
             </md-list-item>
-            <md-list-item class="sidenav-list-item" routerLinkActive="active">
+            <md-list-item class="sidenav-list-item" routerLink="/people" routerLinkActive="active">
                 <md-icon md-list-icon>people</md-icon>
-                <a md-line routerLink="/people" class="list-item">People</a>
+                <span md-line>People</span>
             </md-list-item>
-            <md-list-item class="sidenav-list-item" routerLinkActive="active">
+            <md-list-item class="sidenav-list-item" routerLink="/documents" routerLinkActive="active">
                 <md-icon md-list-icon>folder</md-icon>
-                <a md-line routerLink="/documents" class="list-item">Documents</a>
+                <span md-line>Documents</span>
             </md-list-item>
         </md-nav-list>
     </md-sidenav>
