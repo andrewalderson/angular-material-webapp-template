@@ -1,3 +1,6 @@
 <md-toolbar class="app-header">
-    <span>App Name</span>
+    <button md-icon-button class="navigation-toggle" (click)="toggleNavigation()" [hidden]="!showNavigationToggle">
+        <md-icon>menu</md-icon>
+    </button>
+    <span class="app-title">App Name</span>
 </md-toolbar>
