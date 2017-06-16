@@ -24,3 +24,7 @@ html, body, app-root {
 body {
     font-family: $mat-font-family;
 }
+
+[hidden] {
+    display: none !important;
+}
