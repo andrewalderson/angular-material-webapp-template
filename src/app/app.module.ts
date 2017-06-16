@@ -10,6 +10,11 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { AppSidenavComponent } from './components/app-sidenav/app-sidenav.component';
 
+import {WindowSizeService} from './shared/window-size.service';
+import {AppSidenavStateService} from './components/app-sidenav/app-sidenav-state.service';
+
+import { WindowTokenModule } from 'ngx-window-token';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +27,10 @@ import { AppSidenavComponent } from './components/app-sidenav/app-sidenav.compon
     HttpModule,
     MaterialModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WindowTokenModule
   ],
-  providers: [],
+  providers: [WindowSizeService, AppSidenavStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
