@@ -8,10 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
-import { AppSidenavComponent } from './components/app-sidenav/app-sidenav.component';
+import { AppContentComponent } from './components/app-content/app-content.component';
 
 import {WindowSizeService} from './shared/window-size.service';
-import {AppSidenavStateService} from './components/app-sidenav/app-sidenav-state.service';
+import {SidenavStateService} from './shared/sidenav-state.service';
 
 import { WindowTokenModule } from 'ngx-window-token';
 
@@ -19,7 +19,7 @@ import { WindowTokenModule } from 'ngx-window-token';
   declarations: [
     AppComponent,
     AppHeaderComponent,
-    AppSidenavComponent
+    AppContentComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,7 @@ import { WindowTokenModule } from 'ngx-window-token';
     AppRoutingModule,
     WindowTokenModule
   ],
-  providers: [WindowSizeService, AppSidenavStateService],
+  providers: [WindowSizeService, SidenavStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

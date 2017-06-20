@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppSidenavStateService} from '../app-sidenav/app-sidenav-state.service';
+import { SidenavStateService} from '../../shared/sidenav-state.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { AppSidenavStateService} from '../app-sidenav/app-sidenav-state.service'
 })
 export class AppHeaderComponent implements OnInit {
 
-  constructor(private sidenavStateService: AppSidenavStateService) { }
+  constructor(private sidenavStateService: SidenavStateService) { }
 
   ngOnInit() {
   }

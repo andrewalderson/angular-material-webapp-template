@@ -1,12 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppSidenavComponent } from './app-sidenav.component';
+import { AppContentComponent } from './app-content.component';
 import { WindowSizeService } from '../../shared/window-size.service';
-import { AppSidenavStateService } from './app-sidenav-state.service';
+import { SidenavStateService } from './sidenav-state.service';
 
 describe('AppSidenavComponent', () => {
-  let component: AppSidenavComponent;
-  let fixture: ComponentFixture<AppSidenavComponent>;
+  let component: AppContentComponent;
+  let fixture: ComponentFixture<AppContentComponent>;
 
   const serviceStub = {
     get isOpen() {
@@ -19,14 +19,14 @@ describe('AppSidenavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppSidenavComponent],
-      providers: [{ provide: AppSidenavStateService, useValue: serviceStub }]
+      declarations: [AppContentComponent],
+      providers: [{ provide: SidenavStateService, useValue: serviceStub }]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppSidenavComponent);
+    fixture = TestBed.createComponent(AppContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

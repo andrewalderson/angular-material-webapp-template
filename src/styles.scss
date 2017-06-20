@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 @import './app/app-theme';
 @import './app/components/app-header/app-header-theme';
-@import './app/components/app-sidenav/app-sidenav-theme';
+@import './app/components/app-content/app-content-theme';
 
 @include mat-core();
 
@@ -13,7 +13,7 @@ $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
 @include app-theme($theme);
 @include app-header-theme($theme);
-@include app-sidenav-theme($theme);
+@include app-content-theme($theme);
 
 html, body, app-root {
     width: 100%;

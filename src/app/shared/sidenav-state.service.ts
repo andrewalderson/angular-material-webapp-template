@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import { WindowSizeService } from '../../shared/window-size.service';
+import { WindowSizeService } from './window-size.service';
 
 @Injectable()
-export class AppSidenavStateService {
+export class SidenavStateService {
 
     constructor(windowSizeService: WindowSizeService) {
         windowSizeService.windowSizeChanged$.subscribe(windowSize => {
