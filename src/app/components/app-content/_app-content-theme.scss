@@ -20,5 +20,9 @@
                 }
             }
         }
+        .mat-button {
+            background-color: mat-color($background, background);
+            box-shadow: inset 0px 1px 0px mat-color($foreground, divider);
+        }
     }
 }

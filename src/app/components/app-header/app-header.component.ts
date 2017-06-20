@@ -17,7 +17,7 @@ export class AppHeaderComponent implements OnInit {
     return this.sidenavStateService.isClosable;
   }
 
-  toggleNavigation() {
-    this.sidenavStateService.toggleNavigation();
+  toggleNavigationOpenState() {
+    this.sidenavStateService.toggleNavigationOpenState();
   }
 }

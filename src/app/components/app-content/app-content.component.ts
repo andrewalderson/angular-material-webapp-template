@@ -23,4 +23,16 @@ export class AppContentComponent implements OnInit {
   get navigationMode(): string {
     return this.sidenavStateService.isClosable ? 'over' : 'side';
   }
+
+  get navigationCollapsed(): boolean {
+    return this.sidenavStateService.navigationCollapsed;
+  }
+
+  get navigationCanBeCollapsed(): boolean {
+    return this.navigationMode === 'side';
+  }
+
+  toggleNavigationCollapsedState() {
+    this.sidenavStateService.toggleNavigationCollapsedState();
+  }
 }

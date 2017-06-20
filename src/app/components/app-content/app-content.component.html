@@ -1,19 +1,22 @@
-<md-sidenav-container class="app-content-container">
+<md-sidenav-container [class.app-sidenav-collapsed]="navigationCollapsed">
     <md-sidenav mode="{{navigationMode}}" opened="{{navigationOpened}}" class="app-sidenav">
-        <md-nav-list class="sidenav-list">
-            <md-list-item class="sidenav-list-item" routerLink="/home" routerLinkActive="active">
+        <md-nav-list>
+            <md-list-item class="nav-list-item-home" routerLink="/home" routerLinkActive="active">
                 <md-icon md-list-icon>home</md-icon>
                 <span md-line>Home</span>
             </md-list-item>
-            <md-list-item class="sidenav-list-item" routerLink="/people" routerLinkActive="active">
+            <md-list-item class="nav-list-item-people" routerLink="/people" routerLinkActive="active">
                 <md-icon md-list-icon>people</md-icon>
                 <span md-line>People</span>
             </md-list-item>
-            <md-list-item class="sidenav-list-item" routerLink="/documents" routerLinkActive="active">
+            <md-list-item class="nav-list-item-documents" routerLink="/documents" routerLinkActive="active">
                 <md-icon md-list-icon>folder</md-icon>
                 <span md-line>Documents</span>
             </md-list-item>
         </md-nav-list>
+        <button md-button [hidden]="!navigationCanBeCollapsed" class="sidenav-collapse-button" (click)="toggleNavigationCollapsedState()">
+            <md-icon>chevron_left</md-icon>
+        </button>
     </md-sidenav>
     <router-outlet></router-outlet>
 </md-sidenav-container>

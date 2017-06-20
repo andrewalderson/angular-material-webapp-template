@@ -27,7 +27,17 @@ export class SidenavStateService {
         return this._isClosable;
     }
 
-    toggleNavigation() {
+    private _navigationCollapsed: boolean;
+
+    get navigationCollapsed(): boolean {
+        return this._navigationCollapsed;
+    }
+
+    toggleNavigationOpenState() {
         this._isOpen = !this._isOpen;
+    }
+
+    toggleNavigationCollapsedState() {
+        this._navigationCollapsed = !this._navigationCollapsed;
     }
 }
