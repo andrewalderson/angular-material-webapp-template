@@ -25,4 +25,13 @@
             box-shadow: inset 0px 1px 0px mat-color($foreground, divider);
         }
     }
+
+    .nav-group-root {
+        background-color: mat-color($background, background);
+        box-shadow: inset 0px -1px 0px mat-color($foreground, divider);
+    }
+
+    .nav-list-item-settings {
+        box-shadow: inset 1px 0px 0px mat-color($foreground, divider);
+    }
 }

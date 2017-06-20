@@ -1,19 +1,34 @@
 <md-sidenav-container [class.app-sidenav-collapsed]="navigationCollapsed">
     <md-sidenav mode="{{navigationMode}}" opened="{{navigationOpened}}" class="app-sidenav">
-        <md-nav-list>
-            <md-list-item class="nav-list-item-home" routerLink="/home" routerLinkActive="active">
-                <md-icon md-list-icon>home</md-icon>
-                <span md-line>Home</span>
-            </md-list-item>
-            <md-list-item class="nav-list-item-people" routerLink="/people" routerLinkActive="active">
-                <md-icon md-list-icon>people</md-icon>
-                <span md-line>People</span>
-            </md-list-item>
-            <md-list-item class="nav-list-item-documents" routerLink="/documents" routerLinkActive="active">
-                <md-icon md-list-icon>folder</md-icon>
-                <span md-line>Documents</span>
-            </md-list-item>
-        </md-nav-list>
+        <div class="nav-container">
+            <div class="nav-group nav-group-root">
+                <md-nav-list>
+                    <md-list-item class="nav-list-item-home" routerLink="/home" routerLinkActive="active">
+                        <md-icon md-list-icon>home</md-icon>
+                        <span md-line>Home</span>
+                    </md-list-item>
+                    <md-list-item class="nav-list-item-settings" [mdMenuTriggerFor]="appMenu">
+                        <md-icon md-list-icon>settings</md-icon>
+                    </md-list-item>
+                    <md-menu #appMenu="mdMenu" xPosition="after" [overlapTrigger]="false">
+                        <button md-menu-item> Settings </button>
+                        <button md-menu-item> Help </button>
+                    </md-menu>
+                </md-nav-list>
+            </div>
+            <div class="nav-group">
+                <md-nav-list>
+                    <md-list-item class="nav-list-item-people" routerLink="/people" routerLinkActive="active">
+                        <md-icon md-list-icon>people</md-icon>
+                        <span md-line>People</span>
+                    </md-list-item>
+                    <md-list-item class="nav-list-item-documents" routerLink="/documents" routerLinkActive="active">
+                        <md-icon md-list-icon>folder</md-icon>
+                        <span md-line>Documents</span>
+                    </md-list-item>
+                </md-nav-list>
+            </div>
+        </div>
         <button md-button [hidden]="!navigationCanBeCollapsed" class="sidenav-collapse-button" (click)="toggleNavigationCollapsedState()">
             <md-icon>chevron_left</md-icon>
         </button>
