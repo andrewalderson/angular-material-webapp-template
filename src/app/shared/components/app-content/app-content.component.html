@@ -7,13 +7,9 @@
                         <md-icon md-list-icon>home</md-icon>
                         <span md-line>Home</span>
                     </md-list-item>
-                    <md-list-item class="nav-list-item-settings" [mdMenuTriggerFor]="appMenu">
-                        <md-icon md-list-icon>settings</md-icon>
+                    <md-list-item class="nav-list-item-settings" (click)="settings.openMenu()">
+                        <settings-menu #settings></settings-menu>
                     </md-list-item>
-                    <md-menu #appMenu="mdMenu" xPosition="after" [overlapTrigger]="false">
-                        <button md-menu-item> Settings </button>
-                        <button md-menu-item> Help </button>
-                    </md-menu>
                 </md-nav-list>
             </div>
             <div class="nav-group">

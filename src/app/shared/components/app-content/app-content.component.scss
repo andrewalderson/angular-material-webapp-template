@@ -45,34 +45,6 @@ $app-sidenav-collapsed-width: 64px;
         padding-right: 8px !important;
     }
 }
-.nav-list-item-settings {
-    .mat-icon {
-        transform: null;
-        transition: transform .15s ease-in;
-    }
-    &:after {
-        font-family: 'Material Icons';
-        font-size: 24px;
-        content: 'play_arrow';
-        display: inline-block;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 36px;
-        margin-top: -12px;
-        transform: translateX(-6px) rotate(-45deg);
-        transition: transform .15s ease-in, opacity .075s ease;
-    }
-    &:hover {
-        .mat-icon {
-            transform: translateX(-6px) rotate(-45deg);
-        }
-        &:after {
-            opacity: 1;
-            transform:  translateX(0) rotate(0deg);
-        }
-    }
-}
 .sidenav-collapse-button {
     text-align: right;
     min-width: $app-sidenav-collapsed-width;
