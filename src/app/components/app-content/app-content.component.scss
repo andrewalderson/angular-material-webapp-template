@@ -1,8 +1,7 @@
 $app-sidenav-width: 256px;
-$app-sidenav-collapsed-width: 66px;
+$app-sidenav-collapsed-width: 64px;
 
 .mat-sidenav-container {
-    flex-grow: 1;
     &.app-sidenav-collapsed {
         .mat-sidenav {
             width: $app-sidenav-collapsed-width;
@@ -15,18 +14,10 @@ $app-sidenav-collapsed-width: 66px;
         .mat-sidenav-content {
             margin-left: $app-sidenav-collapsed-width !important;
         }
-        .nav-group-root {
-            .mat-nav-list {
-                flex-direction: column;
-            }
-        }
     }
 }
 .mat-sidenav {
     width: $app-sidenav-width;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
     overflow: hidden;
     min-width: $app-sidenav-collapsed-width;
     &.mat-sidenav-side {
@@ -35,21 +26,14 @@ $app-sidenav-collapsed-width: 66px;
 }
 
 .nav-container {
-    flex: 1 1 auto;
     overflow-y: auto;
     overflow-x: hidden;
-}
-.nav-group {
-
 }
 .nav-group-root {
     padding: 10px 0;
     .mat-nav-list {
         position: relative;
         padding-top: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
     }
 }
 
@@ -57,13 +41,11 @@ $app-sidenav-collapsed-width: 66px;
     position: relative;
 }
 .nav-list-item-home {
-    flex: 1 1 auto;
     .mat-list-item-content {
         padding-right: 8px !important;
     }
 }
 .nav-list-item-settings {
-    flex: 0 0 auto;
     .mat-icon {
         transform: null;
         transition: transform .15s ease-in;
@@ -92,7 +74,6 @@ $app-sidenav-collapsed-width: 66px;
     }
 }
 .sidenav-collapse-button {
-    flex: 0 0 auto;
     text-align: right;
     min-width: $app-sidenav-collapsed-width;
     .mat-icon {

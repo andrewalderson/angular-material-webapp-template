@@ -1,9 +1,9 @@
-<md-sidenav-container [class.app-sidenav-collapsed]="navigationCollapsed">
-    <md-sidenav mode="{{navigationMode}}" opened="{{navigationOpened}}" class="app-sidenav">
-        <div class="nav-container">
+<md-sidenav-container [class.app-sidenav-collapsed]="navigationCollapsed" fxFlexFill>
+    <md-sidenav mode="{{navigationMode}}" opened="{{navigationOpened}}" class="app-sidenav" fxLayout="column" fxFlexAlign="stretch">
+        <div class="nav-container" fxFlex>
             <div class="nav-group nav-group-root">
-                <md-nav-list>
-                    <md-list-item class="nav-list-item-home" routerLink="/home" routerLinkActive="active">
+                <md-nav-list fxLayout="row" fxFlexAlign="stretch" fxLayoutWrap>
+                    <md-list-item class="nav-list-item-home" routerLink="/home" routerLinkActive="active" fxFlex>
                         <md-icon md-list-icon>home</md-icon>
                         <span md-line>Home</span>
                     </md-list-item>
