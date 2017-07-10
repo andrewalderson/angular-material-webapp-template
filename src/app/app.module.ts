@@ -12,8 +12,8 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { AppContentComponent } from './components/app-content/app-content.component';
 
-import { WindowSizeService } from './shared/window-size.service';
-import { SidenavStateService } from './shared/sidenav-state.service';
+import { WindowSizeService } from 'app/shared';
+import { SidenavStateService } from 'app/shared';
 
 import { WindowTokenModule } from 'ngx-window-token';
 
