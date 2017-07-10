@@ -9,10 +9,8 @@ import 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppHeaderComponent } from './components/app-header/app-header.component';
-import { AppContentComponent } from './components/app-content/app-content.component';
 
-import { WindowSizeService, SidenavStateService } from 'app/shared';
+import { WindowSizeService, SidenavStateService, AppHeaderComponent, AppContentComponent } from 'app/shared';
 
 import { WindowTokenModule } from 'ngx-window-token';
 

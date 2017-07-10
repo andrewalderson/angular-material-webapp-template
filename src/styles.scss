@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 @import './app/app-theme';
-@import './app/components/app-header/app-header-theme';
-@import './app/components/app-content/app-content-theme';
+@import './app/shared/components/app-header/app-header-theme';
+@import './app/shared/components/app-content/app-content-theme';
 
 @include mat-core();
 
