@@ -10,7 +10,6 @@ import { SidenavStateService } from "app/shared";
 export class AppContentComponent implements OnInit {
 
   constructor(private sidenavStateService: SidenavStateService) {
-
   }
 
   ngOnInit() {

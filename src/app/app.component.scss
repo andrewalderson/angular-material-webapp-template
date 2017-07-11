@@ -1,4 +1,15 @@
-.app-container {
+@import '../variables';
+
+app-header {
+  position: fixed;
+  z-index: 10;
   width: 100%;
-  height: 100%;
+  height: $app-header-height;
+}
+app-content {
+  position: absolute;
+  top: $app-header-height;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

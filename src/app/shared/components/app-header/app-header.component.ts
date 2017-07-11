@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SidenavStateService} from 'app/shared';
 
 @Component({
@@ -6,12 +6,9 @@ import { SidenavStateService} from 'app/shared';
   templateUrl: './app-header.component.html',
   styleUrls: ['./app-header.component.scss']
 })
-export class AppHeaderComponent implements OnInit {
+export class AppHeaderComponent {
 
   constructor(private sidenavStateService: SidenavStateService) { }
-
-  ngOnInit() {
-  }
 
   get showNavigationToggle(): boolean {
     return this.sidenavStateService.isClosable;
